@@ -8,8 +8,8 @@ import { Component, OnInit, ViewChild, TemplateRef, HostListener} from '@angular
 export class DemoFrameComponent implements OnInit {
 
   public windowWidth : number;
-  @ViewChild('realView') realView : TemplateRef<any>;
-  @ViewChild('shelledView') shelledView : TemplateRef<any>;
+  @ViewChild('realView',{static:true}) realView : TemplateRef<any>;
+  @ViewChild('shelledView',{static:true}) shelledView : TemplateRef<any>;
 
   constructor() { }
 
