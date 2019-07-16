@@ -1,0 +1,10 @@
+<div class="frame-wrapper">
+  <ng-container [ngTemplateOutlet]="(windowWidth < 480)? this.realView : this.shelledView">
+    <ng-template #realView>
+      realView work!!
+    </ng-template>
+    <ng-template #shelledView>
+      shelledView work!!
+    </ng-template>
+  </ng-container>
+</div>
