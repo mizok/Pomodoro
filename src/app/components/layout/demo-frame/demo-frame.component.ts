@@ -8,10 +8,18 @@ import { Component, OnInit, ViewChild, TemplateRef, HostListener} from '@angular
 export class DemoFrameComponent implements OnInit {
 
   public windowWidth : number;
+  public windowHeight : string;
+  
   @ViewChild('realView',{static:true}) realView : TemplateRef<any>;
   @ViewChild('shelledView',{static:true}) shelledView : TemplateRef<any>;
 
   constructor() { }
+
+  getWindowHeight(){
+    var shadowNull = document.querySelectorAll('.shadow-null')[0];
+
+    this.windowHeight = shadowNull.clientHeight + 'px';
+  }
 
   getWindowWidth(){
     this.windowWidth = window.innerWidth;
@@ -20,10 +28,13 @@ export class DemoFrameComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     this.getWindowWidth();
+    this.getWindowHeight();
   }
 
   ngOnInit() {
     this.getWindowWidth();
+    this.getWindowHeight();
+
   }
 
 }

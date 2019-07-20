@@ -1,0 +1,15 @@
+@import 'main';
+.frame-wrapper{
+    height: 100%;
+    &.realView{
+        height: 100%;
+    }
+    &.shelledView{
+        background-color: rgba(233, 229, 220, 0.25);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 75px*$scaleRate;
+        padding-bottom: 75px*$scaleRate;
+    }
+}

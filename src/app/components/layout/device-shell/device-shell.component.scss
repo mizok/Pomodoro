@@ -1,0 +1,57 @@
+@import 'main';
+.device-outline{
+    width: 435px * $scaleRate;
+    height: 847px * $scaleRate;
+    background-color: #fff;
+    border-radius: 50px * $scaleRate;
+    border:5px*$scaleRate solid rgba(164, 206, 232,.3);
+    box-shadow:2px*$scaleRate 2px*$scaleRate 60px*$scaleRate 30px*$scaleRate rgba(203, 203, 203,.3);
+    .display-panel{
+        padding:80px*$scaleRate 30px*$scaleRate 100px*$scaleRate 30px*$scaleRate;
+        height: 100%;
+        position: relative;
+        .top-deco{
+            position: absolute;
+            top: 40px*$scaleRate;
+            left: 0;
+            right: 0;
+            font-size: 0;
+            width: 90px*$scaleRate;
+            margin: 0 auto;
+            .eleL{
+                display: inline-block;
+                width: 10px*$scaleRate;
+                height: 10px*$scaleRate;
+                border-radius: 50%;
+                background-color :rgba(188, 229, 255, 0.3);
+            }
+            .eleR{
+                margin-left: 10px*$scaleRate;
+                display: inline-block;
+                width: 70px*$scaleRate;
+                height: 10px*$scaleRate;
+                border-radius: 5px*$scaleRate;
+                background-color :rgba(188, 229, 255, 0.3);
+            }
+        }
+        .screen-view{
+            height: 100%;
+            width: 100%;
+            border: 3px*$scaleRate solid rgba(192, 235, 255, 0.201);
+            background-color: rgba(238, 237, 237, 0.3);
+            border-radius: 5px*$scaleRate;
+        }
+        .bot-deco{
+            display: inline-block;
+            position: absolute;
+            bottom: 15px*$scaleRate;
+            margin:0 auto;
+            left: 0;
+            right: 0;
+            width: 65px*$scaleRate;
+            height: 65px*$scaleRate;
+            border-radius: 50%;
+            border: 3px*$scaleRate solid rgba(204, 232, 245, 0.201);
+        }
+    }
+}
