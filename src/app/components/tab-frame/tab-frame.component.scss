@@ -1,8 +1,11 @@
 @import 'main';
-
+:host{
+    height: 100%;
+}
 .tab-wrapper{
     display: flex;
     flex-direction: column;
+    height: 100%;
     .tab-container{
         flex:1
     }
