@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, TemplateRef, HostListener} from '@angular/core';
 
+
 @Component({
   selector: 'app-demo-frame',
   templateUrl: './demo-frame.component.html',
@@ -13,7 +14,9 @@ export class DemoFrameComponent implements OnInit {
   @ViewChild('realView',{static:true}) realView : TemplateRef<any>;
   @ViewChild('shelledView',{static:true}) shelledView : TemplateRef<any>;
 
-  constructor() { }
+  constructor() {
+    
+  }
 
   getWindowHeight(){
     var shadowNull = document.querySelectorAll('.shadow-null')[0];

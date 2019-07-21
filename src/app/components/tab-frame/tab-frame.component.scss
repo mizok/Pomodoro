@@ -1,0 +1,25 @@
+@import 'main';
+
+.tab-wrapper{
+    display: flex;
+    flex-direction: column;
+    .tab-container{
+        flex:1
+    }
+    .tab-btn-row{
+        flex:none;
+        display: flex;
+        justify-content: space-between;
+        height: 70px;
+        padding-left: 10px;
+        padding-right: 10px;
+        .tab-btn{
+            width: 30px;
+            height: 30px;
+            border:1px solid orange;
+            .icon{
+    
+            }
+        }
+    }
+}
