@@ -1,8 +1,12 @@
 <div class="tab-wrapper">
-    <div class="tab-container"></div>
-    <div class="tab-btn-row">
-      <div class="tab-btn"></div>
-      <div class="tab-btn"></div>
-      <div class="tab-btn"></div>
+    <div class="tab-container">
+      <ng-content></ng-content>
+    </div>
+    <div class="tab-btn-row-shell">
+        <ul class="tab-btn-row">
+            <li class="tab-btn" *ngFor="let tab of tabArray; i as index">
+              <app-animated-btn [btnStyle]="tab.tabBtnStyle" [isActive]="tab.isActive" (click)="activateTab(tab)"></app-animated-btn>
+            </li>
+        </ul>
     </div>
 </div>
