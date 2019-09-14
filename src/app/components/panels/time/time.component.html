@@ -1,0 +1,21 @@
+<div class="pane-inner">
+    <div class="title-wrapper">
+        <h1>
+            <span (click)="getTimerShape()">Set Time</span>
+        </h1>
+    </div>
+    <div class="timer-wrapper">
+        <div class="timer" [ngStyle]="{height:timerHeight}" #timerEle>
+            <div class="timer-inner">
+                <div class="num">
+                    <span class="main" [ngStyle]="{fontSize:mainFontSize}">23</span>
+                    <span class="vice" [ngStyle]="{fontSize:viceFontSize}">59</span>
+                </div>
+            </div>
+        </div>  
+        <div class="timer-controller">
+            
+        </div>
+    </div>
+</div>
+

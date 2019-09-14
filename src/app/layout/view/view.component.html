@@ -1,7 +1,13 @@
 <div class="view-wrapper">
     <app-tab-frame>
-        <app-tab-item [tabBtnStyle]="'schedule'">1</app-tab-item>
-        <app-tab-item [tabBtnStyle]="'alarm'">2</app-tab-item>
-        <app-tab-item [tabBtnStyle]="'chart'">3</app-tab-item>
+        <app-tab-item [tabBtnStyle]="'tasks'">
+            <app-tasks></app-tasks>
+        </app-tab-item>
+        <app-tab-item [tabBtnStyle]="'time'">
+            <app-time></app-time>
+        </app-tab-item>
+        <app-tab-item [tabBtnStyle]="'report'">
+            <app-report></app-report>
+        </app-tab-item>
     </app-tab-frame>
 </div>

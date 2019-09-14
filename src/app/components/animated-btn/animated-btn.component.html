@@ -1,7 +1,7 @@
 <ng-container [ngSwitch]="btnStyle">
 
     <!-- 第一種tab按鈕 start -->
-    <ng-template [ngSwitchCase]="'schedule'">
+    <ng-template [ngSwitchCase]="'tasks'">
         <div class="btn-wrapper" [ngClass]="btnStyle" [class.active]="isActive">
             <span></span>
             <span></span>
@@ -11,7 +11,7 @@
     <!-- 第一種tab按鈕 end -->
 
     <!-- 第二種tab按鈕 start -->
-    <ng-template [ngSwitchCase]="'alarm'">
+    <ng-template [ngSwitchCase]="'time'">
         <div class="btn-wrapper" [ngClass]="btnStyle" [class.active]="isActive">
             <span class="outer">
                 <div class="part bell">
@@ -33,7 +33,7 @@
     <!-- 第二種tab按鈕 end -->
 
     <!-- 第三種tab按鈕 start -->
-    <ng-template [ngSwitchCase]="'chart'">
+    <ng-template [ngSwitchCase]="'report'">
         <div class="btn-wrapper" [ngClass]="btnStyle" [class.active]="isActive">
             <span class="outer">
                 <span class="line">

@@ -8,7 +8,20 @@ import { Component, OnInit, Input } from '@angular/core';
       <ng-content></ng-content>
     </div>
   `,
-  styleUrls: ['./tab-item.component.scss']
+  styles:[
+    `
+    :host{
+      height:100%;
+    }
+    .tab-pane{
+      animation:fadeIn 1s;
+      height:100%;
+    }
+    `
+  ]
+
+  
+
 })
 export class TabItemComponent implements OnInit {
 

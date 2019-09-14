@@ -9,7 +9,9 @@ import { Component, OnInit, ViewChild, TemplateRef, HostListener} from '@angular
 export class DemoFrameComponent implements OnInit {
 
   public windowWidth : number;
-  public windowHeight : string;
+  public windowHeight : number;
+  public appRealViewHeight : string = null;
+  public syncShadow : string = null;
   
   @ViewChild('realView',{static:true}) realView : TemplateRef<any>;
   @ViewChild('shelledView',{static:true}) shelledView : TemplateRef<any>;
@@ -20,8 +22,21 @@ export class DemoFrameComponent implements OnInit {
 
   getWindowHeight(){
     var shadowNull = document.querySelectorAll('.shadow-null')[0];
+    this.windowHeight = shadowNull.clientHeight;
+    
+    if(this.windowWidth<480){
+      if(this.windowHeight<450){
+        this.appRealViewHeight = '450px';
+      }
+      else{
+        this.appRealViewHeight = this.windowHeight + 'px';
 
-    this.windowHeight = shadowNull.clientHeight + 'px';
+      }
+    }
+    else{
+      this.appRealViewHeight = this.windowHeight + 'px';
+    }
+
   }
 
   getWindowWidth(){

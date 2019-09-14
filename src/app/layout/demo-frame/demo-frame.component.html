@@ -1,4 +1,4 @@
-<div class="frame-wrapper" [ngClass]="(windowWidth < 480)? 'realView' : 'shelledView'" [ngStyle]="windowWidth<480? {'height': windowHeight } : '' ">
+<div class="frame-wrapper" [ngClass]="(windowWidth < 480)? 'realView' : 'shelledView'" [ngStyle]="{'height': appRealViewHeight }">
   <ng-container [ngTemplateOutlet]="(windowWidth < 480)? this.realView : this.shelledView">
     
     <!-- 當螢幕寬度小於480的時候, 取用這個NgTemplate -->

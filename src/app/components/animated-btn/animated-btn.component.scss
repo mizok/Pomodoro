@@ -50,7 +50,7 @@ $border-size : 2px;
         transition: .5s;
         transition-delay: .25s;
     }
-    &.schedule{
+    &.tasks{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -99,7 +99,7 @@ $border-size : 2px;
             border-radius:$border-size;
         }
     }
-    &.alarm{
+    &.time{
         &.active{
             .outer{
                 animation: tada 1s;
@@ -185,7 +185,7 @@ $border-size : 2px;
             }
         }
     }
-    &.chart{
+    &.report{
         &.active{
             .outer{
                 .line{

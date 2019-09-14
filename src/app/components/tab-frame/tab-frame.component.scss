@@ -3,14 +3,12 @@
     height: 100%;
 }
 .tab-wrapper{
-    display: flex;
-    flex-direction: column;
     height: 100%;
     .tab-container{
-        flex:1
+        height: calc(100% - 55px);
+        padding-bottom: 20px;
     }
     .tab-btn-row-shell{
-        flex:none;
         height: 55px;
         padding-left: 10px;
         padding-right: 10px;
