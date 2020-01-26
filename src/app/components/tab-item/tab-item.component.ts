@@ -12,6 +12,11 @@ import { Component, OnInit, Input } from '@angular/core';
     `
     :host{
       height:100%;
+      width:100%;
+      display:block;
+      position:absolute;
+      top:0;
+      left:0;
     }
     .tab-pane{
       animation:fadeIn 1s;

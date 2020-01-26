@@ -4,20 +4,46 @@
 }
 .tab-wrapper{
     height: 100%;
+    display: flex;
+    @media  (max-width:$columnLayoutBP),(max-aspect-ratio: $columnLayoutRatio){
+        display: block;
+    }
     .tab-container{
-        height: calc(100% - 55px);
-        padding-bottom: 20px;
+        height: 100%;
+        width: calc(100% - 55px);
+        position: relative;
+        @media (max-width:$columnLayoutBP),(max-aspect-ratio: $columnLayoutRatio){
+            width: 100%;
+            height: calc(100% - 55px);
+            padding-bottom: 20px;
+        }
     }
     .tab-btn-row-shell{
-        height: 55px;
-        padding-left: 10px;
-        padding-right: 10px;
+        width: 55px;
+        @media  (max-width:$columnLayoutBP),(max-aspect-ratio: $columnLayoutRatio){
+            height: 55px;
+            width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
         .tab-btn-row{
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            @media (max-width:$columnLayoutBP),(max-aspect-ratio: $columnLayoutRatio){
+                flex-direction: row;
+                justify-content: space-between;
+            }
             .tab-btn{
                 width: 25px;
                 height: 25px;
+                +.tab-btn{
+                    margin-top: 50px;
+                    @media  (max-width:$columnLayoutBP),(max-aspect-ratio: $columnLayoutRatio){
+                        margin-top: 0;
+                    }
+                }
             }
         }
     }

@@ -1,14 +1,22 @@
 @import "main";
+:host{
+    height: 100%;
+}
 .pane-inner{
     padding-top: 10px;
+    height: 100%;
 }
 .title-wrapper{
     h1{
         span{
+            user-select: none;
             color:$main-orange;
             font-size: 20px;
             font-family: lato, sans-serif;
-            font-weight: 400;
+            font-weight: 900;
         }
     }
+}
+.content-wrapper{
+    height: calc(100% - 32px);
 }

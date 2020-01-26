@@ -1,16 +1,25 @@
 @import "main";
 .timer-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(ellipse at center, rgba(254, 231, 204, 0.95) 0%, rgba(255,255,255,0) 70%);
+    @media (max-width:$columnLayoutBP),(max-aspect-ratio: $columnLayoutRatio){
+        display: block;
+        background: none;
+    }
     .timer{
         animation:fadeInUpSmall 1s;
         animation-fill-mode: forwards;
-
-        width: 100%;
-        height: 100px;
+        width: 60%;
+        min-height: 250px;
+        min-width: 250px;
+        height: 60%;
+        flex:none;
         border-radius: 50%;
         background-color:rgb(254, 250, 248);
         position: relative;
         box-shadow: 25px 10px 30px 2px rgba(0, 0, 0, 0.08);
-        margin-top: 20px;
         .timer-inner{
             position: absolute;
             display: inline-flex;
@@ -28,6 +37,7 @@
             background-color:rgb(255, 253, 250);
             box-shadow: -17px 10px 40px -1px rgba(0, 0, 0, 0.08);
             .num{
+                user-select: none;
                 display: inline-block;
                 .main{
                     font-size: 100px;
@@ -48,5 +58,68 @@
             }
         }
     }
+    .task-block { 
+        flex:none;
+        width: 25%;
+        margin-left: 50px;
+        @media (max-width:$columnLayoutBP),(max-aspect-ratio: $columnLayoutRatio){
+            margin-left: 0;
+            width: 100%;
+        }
+        .target-task { 
+            color:rgba(108, 80, 49, 0.95);
+            .task-title { 
     
+                h2 { 
+                    font-size: 30px;
+                    font-weight: normal;
+                    line-height: normal;
+                }
+            }
+    
+            .task-descrp { 
+                margin-top: 30px;
+                span { 
+                    font-size: 14px;
+                    line-height: 1.5;
+                    font-weight: 100;
+                    font-family: $text-font-stack;
+                }
+            }
+        }
+    
+        .task-point-row { 
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            .task-point { 
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: orange;
+                position: relative;
+                &.done,&.now{
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        border-right:3px solid white;
+                        border-top:3px solid white;
+                        z-index: 99;
+                        display: block;
+                        left: 0;
+                        right: 0;
+                        margin:0 auto;
+                        height: 30%;
+                        width: 30%;
+                        top: 50%;
+                        transform-origin: center;
+                        transform:translateY(-60%) rotate(135deg);
+                    }
+                }
+                &.done{
+                 opacity: 0.3;   
+                }
+            }
+        }
+    }
 }

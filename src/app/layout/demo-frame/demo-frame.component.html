@@ -1,20 +1,22 @@
-<div class="frame-wrapper" [ngClass]="(windowWidth < 480)? 'realView' : 'shelledView'" [ngStyle]="{'height': appRealViewHeight }">
-  <ng-container [ngTemplateOutlet]="(windowWidth < 480)? this.realView : this.shelledView">
+<div class="frame-wrapper" [ngStyle]="{'height': appRealViewHeight }">
+  <app-view></app-view>
+</div>
+
+
+<!-- <div class="frame-wrapper" [ngClass]="(windowWidth < 1440)? 'realView' : 'shelledView'" [ngStyle]="{'height': appRealViewHeight }">
+  <ng-container [ngTemplateOutlet]="(windowWidth < 1440)? this.realView : this.shelledView">
     
-    <!-- 當螢幕寬度小於480的時候, 取用這個NgTemplate -->
+    當螢幕寬度小於480的時候, 取用這個NgTemplate
     <ng-template #realView>
       <app-view></app-view>
     </ng-template>
     
-    <!-- 當螢幕寬度大於480的時候, 取用這個NgTemplate -->
+    當螢幕寬度大於480的時候, 取用這個NgTemplate
     <ng-template #shelledView>
-        <div class="side-nav"></div>
-        <div class="main-content">
-          <app-device-shell>
-            <app-view></app-view>
-          </app-device-shell>
-        </div>
+        <app-device-shell>
+          <app-view></app-view>
+        </app-device-shell>
     </ng-template>
   
   </ng-container>
-</div>
+</div> -->

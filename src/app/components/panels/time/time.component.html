@@ -1,11 +1,11 @@
 <div class="pane-inner">
-    <div class="title-wrapper">
+    <!-- <div class="title-wrapper">
         <h1>
-            <span (click)="getTimerShape()">Set Time</span>
+            <span>Set Time</span>
         </h1>
-    </div>
-    <div class="timer-wrapper">
-        <div class="timer" [ngStyle]="{height:timerHeight}" #timerEle>
+    </div> -->
+    <div class="timer-wrapper content-wrapper">
+        <div class="timer" [ngStyle]="{'height':timerHeight,'width':timerWidth}" #timerEle>
             <div class="timer-inner">
                 <div class="num">
                     <span class="main" [ngStyle]="{fontSize:mainFontSize}">23</span>
@@ -13,8 +13,29 @@
                 </div>
             </div>
         </div>  
-        <div class="timer-controller">
-            
+        <div class="task-block">
+            <div class="target-task">
+                <div class="task-title">
+                    <h2>
+                        <span>
+                            Quest 3rd Today
+                        </span>
+                    </h2>
+                </div>
+                <div class="task-descrp">
+                    <span>
+                        <!-- 喵喵喵喵喵⋯喵喵喵喵喵喵喵喵喵喵喵。喵喵喵喵喵喵喵，喵喵喵，喵喵喵，喵喵喵喵⋯喵喵喵喵喵喵？ -->
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+                    </span>
+                </div>
+            </div>
+            <ul class="task-point-row">
+                <li class="task-point done"></li>
+                <li class="task-point done"></li>
+                <li class="task-point now"></li>
+                <li class="task-point"></li>
+                <li class="task-point"></li>
+            </ul>
         </div>
     </div>
 </div>

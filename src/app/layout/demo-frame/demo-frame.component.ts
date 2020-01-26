@@ -7,7 +7,7 @@ import { Component, OnInit, ViewChild, TemplateRef, HostListener} from '@angular
   styleUrls: ['./demo-frame.component.scss']
 })
 export class DemoFrameComponent implements OnInit {
-
+  public isMobile : boolean;
   public windowWidth : number;
   public windowHeight : number;
   public appRealViewHeight : string = null;
@@ -21,9 +21,8 @@ export class DemoFrameComponent implements OnInit {
   }
 
   getWindowHeight(){
-    var shadowNull = document.querySelectorAll('.shadow-null')[0];
+    var shadowNull = document.getElementById('shadow-null');
     this.windowHeight = shadowNull.clientHeight;
-    
     if(this.windowWidth<480){
       if(this.windowHeight<450){
         this.appRealViewHeight = '450px';
@@ -50,9 +49,10 @@ export class DemoFrameComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
     this.getWindowWidth();
     this.getWindowHeight();
-
+    
   }
 
 }
